@@ -1,23 +1,28 @@
 import express from "express";
+import morgan from "morgan";
 
 const PORT = 8080;
 
 const app = express();
+app.use(morgan("dev"));
 
-const gossipMiddleware = (req: any, res: any, next: any) => {
-	console.log(`Someone is going to: ${req.url}`);
-	next();
-};
+const globalRouter = express.Router();
 
-const handleHome = (req: any, res: any) => {
-	return res.send("<h1>this is index page</h1>");
-};
+const handleHome = (req: any, res: any) => res.send("Home");
 
-const handleLogin = (req: any, res: any) => {
-	return res.send("this is login page");
-};
-app.get("/", gossipMiddleware, handleHome);
-app.get("/login", handleLogin);
+globalRouter.get("/", handleHome);
+
+const usersRouter = express.Router();
+
+const handleEditUser = (req: any, res: any) => res.send("Edit User");
+
+const videosRouter = express.Router();
+
+const handleWatchVideo = (req: any, res: any) => res.send("Watch Video");
+
+app.use("/", globalRouter);
+app.use("/users", usersRouter);
+app.use("/videos", videosRouter);
 
 const handleListen = () => {
 	console.log(`✅ Server listening on http://localhost:${PORT}`);

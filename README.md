@@ -12,3 +12,27 @@
 
 -   2022/07/25 : 개발환경 설정
 -   2022/07/26 : 포트 지정, 서버 실행
+
+# Documentation
+
+## Domains
+
+### Exceptions
+
+-   / -> Home
+-   /users/join -> 회원가입
+-   /users/login -> 로그인
+-   /search -> 검색
+
+---
+
+-   /users/edit -> 회원정보 수정
+-   /users/delete -> 회원 탈퇴
+
+---
+
+-   /videos/watch -> 동영상 시청
+-   /videos/edit -> 동영상 수정
+-   /videos/delete -> 동영상 삭제
+-   /videos/comments -> 댓글
+-   /videos/comments/delete -> 댓글 삭제
