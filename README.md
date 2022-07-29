@@ -7,6 +7,8 @@
 -   [babel with TypeScript] : https://babeljs.io/docs/en/babel-preset-typescript
 -   [ESLint와 Prettier 적용] : https://velog.io/@kyusung/eslint-prettier-config
 -   [Express API Documentation] : https://expressjs.com/ko/4x/api.html#express
+-   [[Node.js] Express TypeScript 설정하기] : https://velog.io/@jiheon/Node.js-Express-TypeScript-설정하기
+-   [ESLint 상세 설정 가이드] : https://www.daleseo.com/eslint-config/
 
 # progress
 
