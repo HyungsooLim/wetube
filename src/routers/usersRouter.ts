@@ -1,12 +1,18 @@
 import express from "express";
+import {
+	editUser,
+	logout,
+	deleteUser,
+	selectUser,
+} from "../controllers/usersController";
 
 const usersRouter = express.Router();
-const handleEdit = (req: any, res: any) => res.send("Edit User");
-const handleDelete = (req: any, res: any) => res.send("Delete User");
 
 //START HTTP METHOD declaration ===============================================
-usersRouter.get("/edit", handleEdit);
-usersRouter.get("/delete", handleDelete);
+usersRouter.get("/:id", selectUser);
+usersRouter.get("/logout", logout);
+usersRouter.get("/edit", editUser);
+usersRouter.get("/remove", deleteUser);
 //E N D HTTP METHOD declaration ===============================================
 
 export default usersRouter;
