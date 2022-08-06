@@ -42,6 +42,7 @@ export const watch = (req: any, res: any) => {
 		video,
 	});
 };
+
 export const getEdit = (req: any, res: any) => {
 	const { id } = req.params;
 	const video = videos[id - 1];
@@ -51,4 +52,8 @@ export const getEdit = (req: any, res: any) => {
 	});
 };
 
-export const postEdit = (req: any, res: any) => {};
+export const postEdit = (req: any, res: any) => {
+	const { id } = req.params;
+	console.log("[[[req.body]]]", req.body);
+	return res.redirect(`/videos/${id}`);
+};

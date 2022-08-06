@@ -6,8 +6,7 @@ const videosRouter = express.Router();
 //START HTTP METHOD declaration ===============================================
 
 videosRouter.get("/:id(\\d+)", watch);
-videosRouter.get("/:id(\\d+)/edit", getEdit);
-videosRouter.post("/:id(\\d+)/edit", postEdit);
+videosRouter.route("/:id(\\d+)/edit").get(getEdit).post(postEdit);
 
 //E N D HTTP METHOD declaration ===============================================
 
