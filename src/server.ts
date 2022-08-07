@@ -4,7 +4,7 @@ import morgan from "morgan";
 import usersRouter from "./routers/usersRouter";
 import videosRouter from "./routers/videosRouter";
 
-const PORT = 8080;
+const PORT: number = 8080;
 
 const app = express();
 

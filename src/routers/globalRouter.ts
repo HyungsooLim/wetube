@@ -1,8 +1,8 @@
-import express from "express";
+import express, { Router } from "express";
 import { join, login } from "../controllers/usersController";
 import { home } from "../controllers/videosController";
 
-const globalRouter = express.Router();
+const globalRouter: Router = express.Router();
 
 //START HTTP METHOD declaration ===============================================
 globalRouter.get("/", home);

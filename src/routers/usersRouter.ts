@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Router } from "express";
 import {
 	editUser,
 	logout,
@@ -6,7 +6,7 @@ import {
 	selectUser,
 } from "../controllers/usersController";
 
-const usersRouter = express.Router();
+const usersRouter: Router = express.Router();
 
 //START HTTP METHOD declaration ===============================================
 usersRouter.get("/:id", selectUser);

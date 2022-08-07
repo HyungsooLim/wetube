@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request, Response } from "express";
 
 const fakeUser = {
 	username: "HSLim",
@@ -31,11 +31,11 @@ let videos = [
 	},
 ];
 
-export const home = (req: any, res: any) => {
+export const home = (req: Request, res: Response) => {
 	return res.render("home", { pageTitle: "Home", videos });
 };
-export const watch = (req: any, res: any) => {
-	const { id } = req.params;
+export const watch = (req: Request, res: Response) => {
+	const { id }: any = req.params;
 	const video = videos[id - 1];
 	return res.render("watch", {
 		pageTitle: `Watching ${video.title}`,
@@ -43,8 +43,8 @@ export const watch = (req: any, res: any) => {
 	});
 };
 
-export const getEdit = (req: any, res: any) => {
-	const { id } = req.params;
+export const getEdit = (req: Request, res: Response) => {
+	const { id }: any = req.params;
 	const video = videos[id - 1];
 	res.render("edit", {
 		pageTitle: `Editing: ${video.title}`,
@@ -52,8 +52,7 @@ export const getEdit = (req: any, res: any) => {
 	});
 };
 
-export const postEdit = (req: any, res: any) => {
+export const postEdit = (req: Request, res: Response) => {
 	const { id } = req.params;
-	console.log("[[[req.body]]]", req.body);
 	return res.redirect(`/videos/${id}`);
 };

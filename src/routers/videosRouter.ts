@@ -1,7 +1,7 @@
-import express from "express";
+import express, { Router } from "express";
 import { getEdit, watch, postEdit } from "../controllers/videosController";
 
-const videosRouter = express.Router();
+const videosRouter: Router = express.Router();
 
 //START HTTP METHOD declaration ===============================================
 
