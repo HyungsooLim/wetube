@@ -17,6 +17,8 @@
 
 # Documentation
 
+# 오늘은 공부하기 싫다!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 ## Domains
 
 ### Exceptions
