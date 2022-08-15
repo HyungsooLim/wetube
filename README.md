@@ -39,3 +39,7 @@
 -   /videos/:id/edit -> 동영상 수정
 -   /videos/:id/delete -> 동영상 삭제
 -   /videos/upload -> 동영상 게시
+
+### todo
+
+-   migrating to obsidian
