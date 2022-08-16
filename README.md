@@ -43,3 +43,4 @@
 ### todo
 
 -   migrating to obsidian
+-   shut up and type code
